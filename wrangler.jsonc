@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "foobar",
+  "main": "dist/worker.js",
+  "compatibility_date": "2025-03-19",
+  "build": {
+    "command": "pnpm build",
+    "watch_dir": "src",
+  },
+  "observability": {
+    "enabled": false,
+  },
+}
