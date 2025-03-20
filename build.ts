@@ -1,13 +1,12 @@
 import { build } from "esbuild";
 
-interface Process {
-  env: {
-    MESSAGE: string;
-  };
-}
-
 declare global {
-  const process: Process;
+  namespace NodeJS {
+    interface ProcessEnv {
+      MESSAGE: string;
+      DATABASE_URL: string;
+    }
+  }
 }
 
 console.log(process.env.MESSAGE);
