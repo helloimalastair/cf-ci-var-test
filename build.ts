@@ -10,6 +10,7 @@ declare global {
 }
 
 console.log(process.env.MESSAGE);
+console.log("In Build: ", process.env.DATABASE_URL);
 
 await build({
   bundle: true,
